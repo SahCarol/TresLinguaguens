@@ -1,1 +1,279 @@
+const perguntas = [
+    // ========== LINGUAGEM ARTICULADA ==========
+    {
+        texto: "O que é linguagem articulada?",
+        opcoes: [
+            "Linguagem dos sinais",
+            "Comunicação pelo espaço pessoal",
+            "Fala baseada em sons organizados",
+            "Desenhos em cavernas"
+        ],
+        correta: 2,
+        explicacao: "✅ A linguagem articulada é a fala: sons produzidos pela boca, língua e cordas vocais, organizados em palavras e frases."
+    },
+    {
+        texto: "Qual destes é um exemplo de linguagem articulada?",
+        opcoes: [
+            "Piscar os olhos para um amigo",
+            "Escrever um bilhete",
+            "Pedir um sanduíche em voz alta na cantina",
+            "Sentar longe do professor"
+        ],
+        correta: 2,
+        explicacao: "✅ Falar em voz alta é linguagem articulada. Escrever é linguagem escrita (derivada da articulada), mas o exemplo mais direto é a fala."
+    },
+    {
+        texto: "O que acontece se uma pessoa perde a capacidade de produzir sons articulados (afonia)?",
+        opcoes: [
+            "Ela ainda pode se comunicar por escrita ou libras",
+            "Ela nunca mais conseguirá se comunicar",
+            "Ela só conseguirá usar linguagem proxêmica",
+            "Ela passa a pensar de forma diferente"
+        ],
+        correta: 0,
+        explicacao: "✅ A falta da fala não impede a comunicação; existem outras linguagens como a escrita, a libras e a proxêmica."
+    },
 
+    // ========== LINGUAGEM PROXÊMICA ==========
+    {
+        texto: "O que é linguagem proxêmica?",
+        opcoes: [
+            "Comunicação por abraços",
+            "Uso do espaço pessoal e distâncias para transmitir significado",
+            "Linguagem dos animais",
+            "Falar em voz baixa"
+        ],
+        correta: 1,
+        explicacao: "✅ A proxêmica estuda como a distância entre as pessoas comunica sentimentos como intimidade, poder ou desconforto."
+    },
+    {
+        texto: "Na sala de aula, um aluno senta sempre na primeira carteira, perto do professor. O que isso pode comunicar?",
+        opcoes: [
+            "Medo do professor",
+            "Interesse, respeito ou vontade de participar",
+            "Raiva dos colegas",
+            "Desprezo pela matéria"
+        ],
+        correta: 1,
+        explicacao: "✅ Sentar perto do professor geralmente indica engajamento, respeito ou interesse. A proxêmica revela isso sem palavras."
+    },
+    {
+        texto: "No elevador, por que as pessoas geralmente ficam de frente para a porta e evitam contato visual?",
+        opcoes: [
+            "Porque é uma regra da linguagem articulada",
+            "Porque o espaço reduzido exige uma distância de respeito e conforto (proxêmica)",
+            "Porque todas têm vergonha",
+            "Porque é proibido falar no elevador"
+        ],
+        correta: 1,
+        explicacao: "✅ Espaços pequenos como elevadores ativam a proxêmica: as pessoas criam uma 'bolha' de respeito para não invadir umas às outras."
+    },
+    {
+        texto: "Se você está conversando com alguém e essa pessoa dá um passo para trás, o que a proxêmica sugere?",
+        opcoes: [
+            "Ela quer um abraço",
+            "Ela se sente desconfortável com a proximidade",
+            "Ela está com pressa",
+            "Ela quer falar mais alto"
+        ],
+        correta: 1,
+        explicacao: "✅ Recuar no espaço geralmente sinaliza desconforto, necessidade de mais distância pessoal ou desejo de encerrar a proximidade."
+    },
+    {
+        texto: "Em uma fila de banco, qual comportamento é um exemplo de violação da proxêmica?",
+        opcoes: [
+            "Olhar para o celular",
+            "Ficar encostado na pessoa da frente sem necessidade",
+            "Tossir cobrindo a boca",
+            "Falar baixo com o vizinho"
+        ],
+        correta: 1,
+        explicacao: "✅ Invadir o espaço pessoal (encostar) sem permissão é uma violação proxêmica que causa desconforto."
+    },
+
+    // ========== LINGUAGEM HISTÓRICA ==========
+    {
+        texto: "O que significa 'linguagem histórica'?",
+        opcoes: [
+            "Falar apenas de eventos passados",
+            "A língua que não muda nunca",
+            "A língua se transforma com o tempo e a sociedade",
+            "Linguagem usada só em museus"
+        ],
+        correta: 2,
+        explicacao: "✅ As línguas mudam conforme a história: palavras nascem, morrem, mudam de significado. 'Vossa mercê' virou 'você', por exemplo."
+    },
+    {
+        texto: "Qual palavra surgiu no português por causa da tecnologia e da história recente?",
+        opcoes: [
+            "Saudade",
+            "Selfie",
+            "Trovão",
+            "Cavalo"
+        ],
+        correta: 1,
+        explicacao: "✅ 'Selfie' é uma palavra nova, nascida com os celulares e redes sociais. Isso mostra a linguagem acompanhando a história."
+    },
+    {
+        texto: "O que significa a palavra 'saudade' ter surgido no português na época das navegações?",
+        opcoes: [
+            "Que os portugueses nunca sentiam falta de nada",
+            "Que a história de um povo influencia o vocabulário da língua",
+            "Que saudade é uma palavra importada do inglês",
+            "Que essa palavra não tem relação com a história"
+        ],
+        correta: 1,
+        explicacao: "✅ 'Saudade' surgiu com as navegações porque muitos portugueses partiam e sentiam falta de quem ficava. A história criou a palavra."
+    },
+    {
+        texto: "Uma língua morta é aquela que:",
+        opcoes: [
+            "Nunca existiu de verdade",
+            "Não tem mais falantes nativos no dia a dia (ex: latim)",
+            "Só é usada em filmes",
+            "Muda muito rapidamente"
+        ],
+        correta: 1,
+        explicacao: "✅ Latim, egípcio antigo são línguas mortas: ainda existem registros, mas não são línguas maternas de ninguém."
+    },
+
+    // ========== LINGUAGEM E PENSAMENTO ==========
+    {
+        texto: "Como a linguagem pode influenciar o pensamento?",
+        opcoes: [
+            "Ela impede qualquer raciocínio",
+            "Diferentes línguas podem levar a diferentes formas de entender o mundo",
+            "Só existe pensamento sem linguagem",
+            "A linguagem não tem efeito algum na mente"
+        ],
+        correta: 1,
+        explicacao: "✅ Hipótese de Sapir-Whorf e estudos de Vygotsky indicam que a língua que falamos influencia nossa percepção, memória e raciocínio."
+    },
+    {
+        texto: "Um povo que não tem palavras para números acima de 'dois' provavelmente:",
+        opcoes: [
+            "Consegue contar perfeitamente até mil",
+            "Tem dificuldade para pensar em quantidades grandes e exatas",
+            "Usa apenas linguagem proxêmica",
+            "Fala várias línguas ao mesmo tempo"
+        ],
+        correta: 1,
+        explicacao: "✅ Povos como os Pirahã (Amazônia) não têm números exatos, o que afeta como eles pensam sobre quantidades. Exemplo da relação língua-pensamento."
+    },
+    {
+        texto: "Uma língua que usa pontos cardeais (norte, sul, leste, oeste) em vez de 'esquerda' e 'direita' faz com que seus falantes:",
+        opcoes: [
+            "Se percam com frequência",
+            "Desenvolvam uma orientação espacial muito precisa",
+            "Não consigam dançar",
+            "Esqueçam o que é direita"
+        ],
+        correta: 1,
+        explicacao: "✅ Falantes de línguas como o Guugu Yimithirr (Austrália) têm uma bússola mental constante. Mostra como a língua treina o pensamento."
+    },
+
+    // ========== IDENTIFICAÇÃO: QUE LINGUAGEM É ESSA? ==========
+    {
+        texto: "João está muito bravo com Pedro. Em vez de falar, João vira o rosto e senta o mais longe possível dele. Qual linguagem predomina?",
+        opcoes: [
+            "Linguagem articulada",
+            "Linguagem proxêmica",
+            "Linguagem histórica",
+            "Linguagem escrita"
+        ],
+        correta: 1,
+        explicacao: "✅ João usou o espaço (distanciamento) para comunicar sua insatisfação. Isso é proxêmica."
+    },
+    {
+        texto: "Maria explica em voz alta as regras de um jogo para os amigos. Qual linguagem ela está usando?",
+        opcoes: [
+            "Linguagem proxêmica",
+            "Linguagem histórica",
+            "Linguagem articulada",
+            "Linguagem dos sinais"
+        ],
+        correta: 2,
+        explicacao: "✅ Explicar falando, com sons articulados, é linguagem articulada."
+    },
+    {
+        texto: "Um antropólogo descobre que uma palavra antiga significava 'chefe' e hoje significa 'tirano'. Isso é um exemplo de:",
+        opcoes: [
+            "Linguagem proxêmica",
+            "Mudança histórica da língua",
+            "Fala articulada",
+            "Comunicação não verbal"
+        ],
+        correta: 1,
+        explicacao: "✅ Palavras mudam de sentido com o tempo – isso é linguagem histórica atuando."
+    },
+    {
+        texto: "Um aluno sempre levanta a carteira para sentar mais perto da lousa. A professora percebe que ele quer mostrar interesse. Que conceito explica isso?",
+        opcoes: [
+            "Linguagem articulada",
+            "Linguagem proxêmica",
+            "Linguagem histórica",
+            "Pensamento mágico"
+        ],
+        correta: 1,
+        explicacao: "✅ A escolha da distância física (sentar perto) é um ato de proxêmica."
+    },
+
+    // ========== DIFERENCIAÇÃO ENTRE OS TIPOS ==========
+    {
+        texto: "Qual alternativa NÃO é um exemplo de linguagem articulada?",
+        opcoes: [
+            "Um debate na escola",
+            "Um telefonema",
+            "Um sorriso seguido de um passo para trás",
+            "Uma apresentação oral"
+        ],
+        correta: 2,
+        explicacao: "✅ Sorriso + passo para trás envolvem expressão facial e proxêmica, não sons articulados."
+    },
+    {
+        texto: "Qual situação envolve APENAS linguagem proxêmica (sem articulada)?",
+        opcoes: [
+            "Dizer 'sai daqui' empurrando alguém",
+            "Afastar-se silenciosamente de uma pessoa que incomoda",
+            "Escrever um bilhete dizendo 'me deixe em paz'",
+            "Gritar 'não chegue perto'"
+        ],
+        correta: 1,
+        explicacao: "✅ Afastar-se em silêncio usa só o espaço corporal. Não há fala nem escrita."
+    },
+    {
+        texto: "O estudo de como a palavra 'você' surgiu da expressão 'vossa mercê' pertence a qual área?",
+        opcoes: [
+            "Linguagem proxêmica",
+            "Linguagem histórica",
+            "Linguagem articulada pura",
+            "Comunicação animal"
+        ],
+        correta: 1,
+        explicacao: "✅ A mudança 'vossa mercê' → 'você' é uma evolução histórica da língua."
+    },
+
+    // ========== EXTRA: PENSAMENTO CRÍTICO ==========
+    {
+        texto: "Se uma língua não tem o tempo futuro nos verbos, o que alguns estudiosos sugerem sobre seus falantes?",
+        opcoes: [
+            "Eles vivem mais no presente, com menos ansiedade sobre o futuro",
+            "Eles não conseguem planejar nada",
+            "Eles falam mais rápido",
+            "Eles só existem no passado"
+        ],
+        correta: 0,
+        explicacao: "✅ Estudos (como de Keith Chen) sugerem que falantes de línguas sem futuro gramatical tendem a poupar mais e viver mais o presente. É uma hipótese sobre língua e pensamento."
+    },
+    {
+        texto: "Você entra em um ônibus vazio e uma pessoa senta exatamente no banco ao lado do seu. Você se sente incomodado(a). Isso acontece por causa:",
+        opcoes: [
+            "De uma doença mental",
+            "Da violação das regras proxêmicas (espaço pessoal)",
+            "De um problema na fala",
+            "Da falta de educação apenas"
+        ],
+        correta: 1,
+        explicacao: "✅ Em um espaço vazio, sentar colado desrespeita a distância social esperada. A proxêmica explica o desconforto."
+    }
+];
